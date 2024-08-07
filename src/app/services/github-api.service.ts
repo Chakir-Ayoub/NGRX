@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from '../models/user';
 
@@ -8,7 +8,9 @@ import { User } from '../models/user';
 })
 export class GithubApiService {
   urlApi: string = 'https://api.github.com/users';
-  constructor(private http: HttpClient) {}
+  // constructor(private http: HttpClient) { }
+
+  http = inject(HttpClient);
 
   getAllUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.urlApi);

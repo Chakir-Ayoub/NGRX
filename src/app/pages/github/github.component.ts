@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { GithubApiService } from '../../services/github-api.service';
 import { User } from '../../models/user';
 
@@ -12,9 +12,11 @@ import { User } from '../../models/user';
 export class GithubComponent {
   users: User[] = [];
 
-  constructor(private githubApiService: GithubApiService) {
-    console.log('consctructor');
-  }
+  // constructor(private githubApiService: GithubApiService) {
+  //   console.log('consctructor');
+  // }
+
+  githubApiService = inject(GithubApiService);
 
   ngOnInit() {
     console.log('on init');
