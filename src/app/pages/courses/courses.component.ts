@@ -6,7 +6,7 @@ import { Course } from '../../models/course';
 import { AddIconComponent } from '../../components/icons/add-icon/add-icon.component';
 import { ceil, random, range, slice } from 'lodash';
 import { FormsModule } from '@angular/forms';
-import { NgClass } from '@angular/common';
+import { JsonPipe, KeyValuePipe, NgClass, PercentPipe } from '@angular/common';
 import { courseList } from '../../data';
 
 @Component({
@@ -19,11 +19,16 @@ import { courseList } from '../../data';
     AddIconComponent,
     FormsModule,
     NgClass,
+    KeyValuePipe,
+    JsonPipe,
+    PercentPipe,
   ],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css',
 })
 export class CoursesComponent {
+  taux: number = 0.75;
+
   courses: Course[] = courseList;
 
   list: boolean = true;

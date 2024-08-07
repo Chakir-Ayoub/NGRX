@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Course } from '../../../models/course';
 import { FormsModule } from '@angular/forms';
+import { JsonPipe, KeyValuePipe, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-form-course',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, JsonPipe, KeyValuePipe, NgFor],
   templateUrl: './form-course.component.html',
   styleUrl: './form-course.component.css',
 })
