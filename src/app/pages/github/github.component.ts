@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { GithubApiService } from '../../services/github-api.service';
 import { User } from '../../models/user';
+import { ListGithubComponent } from '../../components/github/list-github/list-github.component';
 
 @Component({
   selector: 'app-github',
   standalone: true,
-  imports: [],
+  imports: [ListGithubComponent],
   templateUrl: './github.component.html',
   styleUrl: './github.component.css',
 })
