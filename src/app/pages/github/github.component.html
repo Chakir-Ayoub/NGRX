@@ -1,7 +1,7 @@
 
 <div class="flex my-10 mx-4 justify-between">
     <h1 class="font-black text-3xl">List of users</h1>
-    <input placeholder="Search..." type="search" class="input input-bordered">
+    <input (change)="searchUsers()" [(ngModel)]="search" placeholder="Search..." type="search" class="input input-bordered">
 </div>
 
 <app-list-github [users]="users"></app-list-github>

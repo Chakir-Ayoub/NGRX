@@ -18,3 +18,9 @@ export interface User {
   type: string;
   site_admin: boolean;
 }
+
+export interface SearchResponse {
+  total_count: number;
+  incomplete_results: boolean;
+  items: User[];
+}
