@@ -3,15 +3,23 @@ import { GithubApiService } from '../../services/github-api.service';
 import { User } from '../../models/user';
 import { ListGithubComponent } from '../../components/github/list-github/list-github.component';
 import { FormsModule } from '@angular/forms';
+import { SkeletonCardComponent } from '../../components/shared/skeleton-card/skeleton-card.component';
+import { LoadingComponent } from '../../components/shared/loading/loading.component';
 
 @Component({
   selector: 'app-github',
   standalone: true,
-  imports: [ListGithubComponent, FormsModule],
+  imports: [
+    ListGithubComponent,
+    FormsModule,
+    SkeletonCardComponent,
+    LoadingComponent,
+  ],
   templateUrl: './github.component.html',
   styleUrl: './github.component.css',
 })
 export class GithubComponent {
+  isVisible: boolean = false;
   search: string = '';
   users: User[] = [];
 
@@ -20,6 +28,10 @@ export class GithubComponent {
   // }
 
   githubApiService = inject(GithubApiService);
+
+  show() {
+    this.isVisible = true;
+  }
 
   ngOnInit() {
     console.log('on init');
@@ -30,7 +42,6 @@ export class GithubComponent {
     this.githubApiService.getAllUsers().subscribe({
       next: (res) => {
         this.users = res;
-        console.log(res);
       },
       error: (err) => console.log(err),
       complete: () => console.log('complted'),

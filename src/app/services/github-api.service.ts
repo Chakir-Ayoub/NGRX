@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { map, Observable, of, tap } from 'rxjs';
+import { catchError, map, Observable, of, tap, throwError } from 'rxjs';
 import { SearchResponse, User } from '../models/user';
 
 @Injectable({
@@ -19,6 +19,13 @@ export class GithubApiService {
   searchUsers(search: string): Observable<User[]> {
     return this.http
       .get<SearchResponse>(`${this.urlApi}/search/users?q=${search}`)
-      .pipe(map((res) => res.items));
+      .pipe(
+        map((res) => {
+          if (res.items.length) {
+            catchError(() => of('Not items to fetch!!!'));
+          }
+          return res.items;
+        })
+      );
   }
 }
