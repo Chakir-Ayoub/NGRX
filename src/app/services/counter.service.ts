@@ -14,12 +14,12 @@ export class CounterService {
     return this.count.asObservable();
   }
 
-  increment(value: number) {
-    this.count.next(value + 1);
+  increment() {
+    this.count.next(this.count.getValue() + 1);
   }
 
-  decrement(value: number) {
-    this.count.next(value - 1);
+  decrement() {
+    this.count.next(this.count.getValue() - 1);
   }
 
   reset() {

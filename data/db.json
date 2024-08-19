@@ -1,0 +1,118 @@
+{
+  "articles": [
+    {
+      "title": "text at this input title",
+      "body": " is simply dummy text oustry's standard ever since the 1500s",
+      "category": "Home Decoration",
+      "image": "https://images.pexels.com/photos/27852045/pexels-photo-27852045/free-photo-of-a-woman-in-a-black-dress-standing-on-a-rock-in-the-ocean.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "author": 1,
+      "views": 0,
+      "reaction": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "id": 1
+    },
+    {
+      "title": "basma here",
+      "body": "It is a long established fact that a reader at its layout. ",
+      "category": "Beauty",
+      "image": "https://images.pexels.com/photos/27810051/pexels-photo-27810051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "author": 1,
+      "views": 0,
+      "reaction": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "id": 2
+    },
+    {
+      "title": "rabat",
+      "body": "There are many variations of lable, but the majority have",
+      "category": "Home Decoration",
+      "image": "https://images.pexels.com/photos/27564650/pexels-photo-27564650/free-photo-of-volcan-de-fuego.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "author": 1,
+      "views": 0,
+      "reaction": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "slug": "beauty",
+      "name": "Beauty"
+    },
+    {
+      "slug": "fragrances",
+      "name": "Fragrances"
+    },
+    {
+      "slug": "furniture",
+      "name": "Furniture"
+    },
+    {
+      "slug": "groceries",
+      "name": "Groceries"
+    },
+    {
+      "slug": "home-decoration",
+      "name": "Home Decoration"
+    },
+    {
+      "slug": "kitchen-accessories",
+      "name": "Kitchen Accessories"
+    },
+    {
+      "slug": "laptops",
+      "name": "Laptops"
+    },
+    {
+      "slug": "mens-shirts",
+      "name": "Mens Shirts"
+    },
+    {
+      "slug": "mens-shoes",
+      "name": "Mens Shoes"
+    },
+    {
+      "slug": "mens-watches",
+      "name": "Mens Watches"
+    },
+    {
+      "slug": "mobile-accessories",
+      "name": "Mobile Accessories"
+    },
+    {
+      "slug": "motorcycle",
+      "name": "Motorcycle"
+    },
+    {
+      "slug": "skin-care",
+      "name": "Skin Care"
+    },
+    {
+      "slug": "smartphones",
+      "name": "Smartphones"
+    },
+    {
+      "slug": "sports-accessories",
+      "name": "Sports Accessories"
+    },
+    {
+      "slug": "sunglasses",
+      "name": "Sunglasses"
+    },
+    {
+      "slug": "tablets",
+      "name": "Tablets"
+    },
+    {
+      "slug": "tops",
+      "name": "Tops"
+    }
+  ],
+  "users": []
+}

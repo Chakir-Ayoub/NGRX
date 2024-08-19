@@ -11,10 +11,4 @@ import { AsyncPipe } from '@angular/common';
 })
 export class CounterPageComponent {
   counterService = inject(CounterService);
-
-  currentCount: number = 0;
-
-  ngOnInit() {
-    this.counterService.getCout().subscribe((res) => (this.currentCount = res));
-  }
 }

@@ -4,10 +4,10 @@
     <input (change)="searchUsers()" [(ngModel)]="search" placeholder="Search..." type="search" class="input input-bordered">
 </div>
 
-<button (click)="show()"  #load class="btn btn-sm btn-primary my-4">Load</button>
+<!-- <button (click)="show()"  #load class="btn btn-sm btn-primary my-4">Load</button> -->
 
 
-@defer(when isVisible) {
+@defer(on idle) {
     <app-list-github [users]="users"></app-list-github>
 }
 @placeholder {

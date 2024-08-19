@@ -1,0 +1,44 @@
+
+<div class="flex mt-10 justify-between mx-10">
+    <h1 class="text-3xl font-black">Blog</h1>
+    @if((title$ | async) == 'List') {
+        <a routerLink="/blog/create" class="btn btn-accent">Add</a>
+    }
+    @else {
+        <a routerLink="/blog/list" class="btn btn-accent">Back</a>
+    }
+</div>
+
+<div class="flex my-3 mx-10">
+    <div class="breadcrumbs text-sm">
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/blog/list">Blog</a></li>
+          <li>{{ (title$ | async) ?? 'List' }}</li>
+        </ul>
+      </div>
+</div>
+
+<div class="flex flex-row my-10">
+    <div class="basis-3/4">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="basis-1/4">
+        <ul class="menu bg-base-200 rounded-box w-56">
+            <li class="menu-title">Categories</li>
+            <li><a>Item 1</a></li>
+            <li><a>Item 2</a></li>
+            <li><a>Item 3</a></li>
+            <li><a>Item 1</a></li>
+            <li><a>Item 2</a></li>
+            <li><a>Item 3</a></li>
+            <li><a>Item 1</a></li>
+            <li><a>Item 2</a></li>
+            <li><a>Item 3</a></li>
+            <li><a>Item 1</a></li>
+            <li><a>Item 2</a></li>
+            <li><a>Item 3</a></li>
+          </ul>
+    </div>
+</div>
+
