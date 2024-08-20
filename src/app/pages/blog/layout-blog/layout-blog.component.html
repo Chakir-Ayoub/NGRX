@@ -1,7 +1,8 @@
 
+@let title = (title$ | async) ?? 'List';
 <div class="flex mt-10 justify-between mx-10">
     <h1 class="text-3xl font-black">Blog</h1>
-    @if((title$ | async) == 'List') {
+    @if(title == 'List') {
         <a routerLink="/blog/create" class="btn btn-accent">Add</a>
     }
     @else {
@@ -14,7 +15,7 @@
         <ul>
           <li><a routerLink="/">Home</a></li>
           <li><a routerLink="/blog/list">Blog</a></li>
-          <li>{{ (title$ | async) ?? 'List' }}</li>
+          <li>{{ title }}</li>
         </ul>
       </div>
 </div>
@@ -26,18 +27,11 @@
     <div class="basis-1/4">
         <ul class="menu bg-base-200 rounded-box w-56">
             <li class="menu-title">Categories</li>
-            <li><a>Item 1</a></li>
-            <li><a>Item 2</a></li>
-            <li><a>Item 3</a></li>
-            <li><a>Item 1</a></li>
-            <li><a>Item 2</a></li>
-            <li><a>Item 3</a></li>
-            <li><a>Item 1</a></li>
-            <li><a>Item 2</a></li>
-            <li><a>Item 3</a></li>
-            <li><a>Item 1</a></li>
-            <li><a>Item 2</a></li>
-            <li><a>Item 3</a></li>
+            @for(category of categoryService.categories(); track $index) {
+
+                <li><a>{{ category.name }}</a></li>
+            }
+           
           </ul>
     </div>
 </div>
