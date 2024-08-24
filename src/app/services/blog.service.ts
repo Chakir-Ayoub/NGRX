@@ -3,6 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Article } from '../models/article';
 import { Observable } from 'rxjs';
 
+interface Action {
+  reaction?: {
+    likes: number;
+    dislikes: number;
+  };
+  views?: number;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -25,6 +33,10 @@ export class BlogService {
 
   update(id: number, data: Article): Observable<Article> {
     return this.http.put<Article>(`${this.apiUrl}/${id}`, data);
+  }
+
+  actions(id: number, data: Action) {
+    return this.http.patch<Article>(`${this.apiUrl}/${id}`, data);
   }
 
   destroy(id: number): Observable<Article> {

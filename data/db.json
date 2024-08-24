@@ -1,41 +1,40 @@
 {
   "articles": [
     {
-      "title": "Learn angular from scratch",
-      "category": "Mens Shoes",
-      "body": "angular is the most framework in the world",
+      "title": "Learn angular 18 from scratch",
+      "category": "Home Decoration",
+      "body": "angular 18 is the most framework in the world",
       "image": "https://images.pexels.com/photos/20418667/pexels-photo-20418667/free-photo-of-pink-rose-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "views": 0,
-      "author": 1,
+      "id": 1,
+      "views": 6,
       "reaction": {
-        "likes": 0,
-        "dislikes": 0
-      },
-      "id": 1
+        "likes": 70,
+        "dislikes": 6
+      }
     },
     {
-      "title": "Learn Spring boot",
+      "title": "Learn Spring boot 2.0",
       "category": "Mens Watches",
       "body": "simply dummy text of the printing and",
       "image": "https://images.pexels.com/photos/27308719/pexels-photo-27308719/free-photo-of-mares-da-alma-navegando-no-rio-vermelho.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "views": 0,
+      "id": 2,
+      "views": 3,
       "author": 1,
       "reaction": {
-        "likes": 0,
-        "dislikes": 0
-      },
-      "id": 2
+        "likes": 43,
+        "dislikes": 3
+      }
     },
     {
       "title": "Learn Reactjs",
       "category": "Motorcycle",
       "body": "simply dummy text of the printing and",
       "image": "https://images.pexels.com/photos/12906896/pexels-photo-12906896.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "views": 0,
+      "views": 2,
       "author": 1,
       "reaction": {
-        "likes": 0,
-        "dislikes": 0
+        "likes": 49,
+        "dislikes": 3
       },
       "id": 3
     },
@@ -44,11 +43,11 @@
       "category": "Skin Care",
       "body": "simply dummy text of the printing and",
       "image": "https://images.pexels.com/photos/18688173/pexels-photo-18688173/free-photo-of-a-woman-is-making-a-pottery-with-a-brush.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "views": 0,
+      "views": 1,
       "author": 1,
       "reaction": {
-        "likes": 0,
-        "dislikes": 0
+        "likes": 73,
+        "dislikes": 2
       },
       "id": 4
     }

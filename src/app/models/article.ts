@@ -2,11 +2,11 @@ export interface Article {
   id?: number;
   title: string;
   body: string;
-  views: number;
-  reaction: Reaction;
+  views?: number;
+  reaction?: Reaction;
   image: string;
   category: Category;
-  author: number;
+  author?: number;
 }
 
 export interface Reaction {
