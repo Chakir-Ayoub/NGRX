@@ -8,7 +8,7 @@
       "id": 1,
       "views": 6,
       "reaction": {
-        "likes": 70,
+        "likes": 126,
         "dislikes": 6
       }
     },
@@ -18,10 +18,10 @@
       "body": "simply dummy text of the printing and",
       "image": "https://images.pexels.com/photos/27308719/pexels-photo-27308719/free-photo-of-mares-da-alma-navegando-no-rio-vermelho.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "id": 2,
-      "views": 3,
+      "views": 4,
       "author": 1,
       "reaction": {
-        "likes": 43,
+        "likes": 44,
         "dislikes": 3
       }
     },
@@ -50,6 +50,19 @@
         "dislikes": 2
       },
       "id": 4
+    },
+    {
+      "title": "Learn React Native",
+      "category": "Groceries",
+      "body": "learn how to dev a mobile apps ",
+      "image": "https://images.pexels.com/photos/26691734/pexels-photo-26691734/free-photo-of-photo-of-jellyfish-swimming-underwater.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id": 5,
+      "views": 1,
+      "author": 1,
+      "reaction": {
+        "likes": 1,
+        "dislikes": 0
+      }
     }
   ],
   "categories": [

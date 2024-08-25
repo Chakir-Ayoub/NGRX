@@ -4,11 +4,12 @@ import { Router, RouterLink } from '@angular/router';
 import { CategoryService } from '../../../services/category.service';
 import { Article } from '../../../models/article';
 import { BlogService } from '../../../services/blog.service';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-article-create',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, FormsModule],
   templateUrl: './article-create.component.html',
   styleUrl: './article-create.component.css',
 })
@@ -22,12 +23,11 @@ export class ArticleCreateComponent {
   @ViewChild('body') body!: ElementRef;
   @ViewChild('image') image!: ElementRef;
 
-  submit() {
+  submit(myForm: NgForm) {
+    console.log(myForm);
+    return;
     const myArticle: Article = {
-      title: this.title.nativeElement.value,
-      category: this.category.nativeElement.value,
-      body: this.body.nativeElement.value,
-      image: this.image.nativeElement.value,
+      ...myForm.value,
       views: 0,
       author: 1,
       reaction: {
