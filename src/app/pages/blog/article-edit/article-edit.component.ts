@@ -4,21 +4,39 @@ import { CategoryService } from '../../../services/category.service';
 import { BlogService } from '../../../services/blog.service';
 import { Article } from '../../../models/article';
 import { Location } from '@angular/common';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-article-edit',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, ReactiveFormsModule],
   templateUrl: './article-edit.component.html',
   styleUrl: './article-edit.component.css',
 })
 export class ArticleEditComponent {
-  @ViewChild('title') title!: ElementRef;
-  @ViewChild('category') category!: ElementRef;
-  @ViewChild('body') body!: ElementRef;
-  @ViewChild('image') image!: ElementRef;
-
   id!: number;
+
+  articleForm!: FormGroup;
+
+  constructor() {
+    this.articleForm = new FormGroup({
+      title: new FormControl('', [
+        Validators.required,
+        Validators.minLength(5),
+      ]),
+      body: new FormControl('', [
+        Validators.required,
+        Validators.minLength(10),
+      ]),
+      image: new FormControl('', Validators.required),
+      category: new FormControl('', Validators.required),
+    });
+  }
 
   categoryService = inject(CategoryService);
   blogService = inject(BlogService);
@@ -35,20 +53,18 @@ export class ArticleEditComponent {
 
   loadArticle(id: number) {
     this.blogService.get(id).subscribe((res) => {
-      this.title.nativeElement.value = res.title;
-      this.category.nativeElement.value = res.category;
-      this.body.nativeElement.value = res.body;
-      this.image.nativeElement.value = res.image;
+      this.articleForm.patchValue(res);
     });
   }
 
   submit() {
+    if (this.articleForm.invalid) {
+      return;
+    }
+
     const myArticle: Article = {
-      title: this.title.nativeElement.value,
-      category: this.category.nativeElement.value,
-      body: this.body.nativeElement.value,
-      image: this.image.nativeElement.value,
-    };
+      ...this.articleForm.value,
+    } as Article;
     this.blogService.update(this.id, myArticle).subscribe({
       next: (res) => {
         this.location.back();
@@ -57,5 +73,21 @@ export class ArticleEditComponent {
         console.log(err);
       },
     });
+  }
+
+  get title() {
+    return this.articleForm.get('title');
+  }
+
+  get body() {
+    return this.articleForm.get('body');
+  }
+
+  get image() {
+    return this.articleForm.get('image');
+  }
+
+  get category() {
+    return this.articleForm.get('category');
   }
 }

@@ -32,7 +32,7 @@ export class BlogService {
   }
 
   update(id: number, data: Article): Observable<Article> {
-    return this.http.put<Article>(`${this.apiUrl}/${id}`, data);
+    return this.http.patch<Article>(`${this.apiUrl}/${id}`, data);
   }
 
   actions(id: number, data: Action) {

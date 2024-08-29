@@ -1,7 +1,7 @@
 {
   "articles": [
     {
-      "title": "Learn angular 18 from scratch",
+      "title": "Learn angular 19 from scratch",
       "category": "Home Decoration",
       "body": "angular 18 is the most framework in the world",
       "image": "https://images.pexels.com/photos/20418667/pexels-photo-20418667/free-photo-of-pink-rose-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -13,17 +13,11 @@
       }
     },
     {
-      "title": "Learn Spring boot 2.0",
-      "category": "Mens Watches",
+      "title": "Learn Spring boot 2.0 from scratch",
       "body": "simply dummy text of the printing and",
       "image": "https://images.pexels.com/photos/27308719/pexels-photo-27308719/free-photo-of-mares-da-alma-navegando-no-rio-vermelho.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "id": 2,
-      "views": 4,
-      "author": 1,
-      "reaction": {
-        "likes": 44,
-        "dislikes": 3
-      }
+      "category": "Mens Watches",
+      "id": 2
     },
     {
       "title": "Learn Reactjs",
@@ -63,6 +57,19 @@
         "likes": 1,
         "dislikes": 0
       }
+    },
+    {
+      "title": "Learn Php 8",
+      "category": "Furniture",
+      "body": "dfdfdgfgfg",
+      "image": "https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://cdn.filestackcontent.com/z2iWLZqWSEGLzj7tkVx3",
+      "views": 0,
+      "author": 1,
+      "reaction": {
+        "likes": 0,
+        "dislikes": 0
+      },
+      "id": 6
     }
   ],
   "categories": [

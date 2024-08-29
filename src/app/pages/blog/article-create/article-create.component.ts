@@ -24,8 +24,10 @@ export class ArticleCreateComponent {
   @ViewChild('image') image!: ElementRef;
 
   submit(myForm: NgForm) {
-    console.log(myForm);
-    return;
+    if (myForm.invalid) {
+      return;
+    }
+
     const myArticle: Article = {
       ...myForm.value,
       views: 0,
