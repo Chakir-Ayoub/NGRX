@@ -4,6 +4,7 @@ import { AsyncPipe } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { selectCount } from '../../store/counter/counter.selectors';
 import {Observable} from 'rxjs';
+import { increment,decrement, reset } from '../../store/counter/counter.actions';
 @Component({
   selector: 'app-counter-page',
   standalone: true,
@@ -19,5 +20,17 @@ export class CounterPageComponent {
 
   ngOnInit() {
    this.mycount= this.store.select(selectCount);
+  }
+
+  increment(){
+    this.store.dispatch(increment());
+  }
+
+  decrement(){
+    this.store.dispatch(decrement())
+  }
+
+  reset(){
+    this.store.dispatch(reset());
   }
 }

@@ -6,5 +6,5 @@ export const counterReducer=createReducer(
   counterState,
   on(increment,(state)=>({...state, count: state.count + 1})),
   on(decrement,(state)=>({...state, count: state.count -1 })),
-  on(reset,(state)=>({...state, count: state.count= 0}))
+  on(reset,(state)=>({...state, count: 0}))
 );
