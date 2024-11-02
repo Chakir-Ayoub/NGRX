@@ -1,5 +1,5 @@
 import { CounterModel } from "./counter.models";
 
-const counterState:CounterModel={
+export const counterState:CounterModel={
   count:0,
 };
