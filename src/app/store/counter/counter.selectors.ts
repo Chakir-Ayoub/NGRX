@@ -1,8 +1,8 @@
 import { createSelector } from "@ngrx/store";
-import { CounterModel } from "./counter.models"
+import { CounterState } from "./counter.models"
 
 interface AppState{
-  counter:CounterModel;
+  counter:CounterState;
 }
 export const trackCounter=(state:AppState)=>state.counter
 

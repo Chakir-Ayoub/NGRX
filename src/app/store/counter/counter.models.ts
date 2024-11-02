@@ -1,3 +1,3 @@
-export interface CounterModel{
+export interface CounterState {
   count: number;
 }
