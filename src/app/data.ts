@@ -1,5 +1,9 @@
 import { Course } from './models/course';
-
+import { ContactModels } from './store/contact/contact.models';
+export const contacts: ContactModels[]=[
+{id:1,name:'Chakir Ayoub',phone:'555-12340',active:true},
+{id:2,name:'Oussama Bouhamidi',phone:'5555-1215',active:false},
+];
 export const courseList: Course[] = [
   {
     id: 1,
