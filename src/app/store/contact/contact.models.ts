@@ -7,4 +7,5 @@ export interface ContactModels{
 
 export interface ContactState{
   contacts:ContactModels[];
+  edit:boolean;
 }
