@@ -12,6 +12,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(),
     provideStore(),
-    provideState(appStore.counter)
+    provideState(appStore.counter),
+    provideState(appStore.contact)
 ],
 };

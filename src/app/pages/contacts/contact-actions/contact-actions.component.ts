@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
+import { ContactModels } from '../../../store/contact/contact.models';
 
 @Component({
   selector: 'app-contact-actions',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './contact-actions.component.css'
 })
 export class ContactActionsComponent {
-
+  @Input() contact!:ContactModels;
 }
