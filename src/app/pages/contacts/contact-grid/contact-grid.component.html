@@ -1,1 +1,13 @@
-<p>contact-grid works!</p>
+@for(contact of (contacts | async); track $index){
+
+  <div class="card w96 bg-base-100 shadow-xl m-3">
+    <div class="card-body">
+      <h1>{{contact.name}}</h1>
+      <p>{{contact.phone}}</p>
+       <div class="card-actions justify-end">
+          <app-contact-actions></app-contact-actions>
+       </div>
+       <p>We are using cookies for no reason.</p>
+    </div>
+  </div>
+}
